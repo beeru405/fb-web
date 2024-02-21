@@ -38,7 +38,7 @@ public class MainServlet extends HttpServlet {
                 String password = request.getParameter("psw");
 
                 // SQL query to insert data into the 'web1' table
-                String sql = "INSERT INTO web1 (name, mobile, email, password) VALUES (?, ?, ?, ?)";
+                String sql = "INSERT INTO web (name, mobile, email, password) VALUES (?, ?, ?, ?)";
                 
                 try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
                     preparedStatement.setString(1, name);
