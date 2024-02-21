@@ -1,7 +1,9 @@
+<!-- index.jsp -->
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Registration Form</title>
+    <title>User Registration Form</title>
 </head>
 <body>
 
@@ -14,16 +16,16 @@
         String password = request.getParameter("psw");
         String confirmPassword = request.getParameter("psw-repeat");
 
-        // You can perform further validation and store the data in the database here
-
         // Assuming a simple validation for password matching
         if (password.equals(confirmPassword)) {
+            // Display a message indicating successful registration
 %>
             <div class="container">
                 <h1>Thank you, <%= name %>! Happy Learning</h1>
             </div>
 <%
         } else {
+            // Display a message indicating password mismatch
 %>
             <div class="container">
                 <p>Passwords do not match. Please try again.</p>
@@ -33,9 +35,9 @@
     }
 %>
 
-<form action="<%= request.getContextPath() %>/index.jsp" method="post">
+<form action="<%= request.getContextPath() %>/main" method="post">
     <div class="container">
-        <h1>New user Register for facebook lite</h1>
+        <h1>New user Register for Facebook Lite</h1>
         <p>Please fill in this form to create an account.</p>
         <hr>
 
