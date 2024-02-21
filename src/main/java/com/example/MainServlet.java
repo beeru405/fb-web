@@ -18,9 +18,9 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/main")
 public class MainServlet extends HttpServlet {
     // Update these values with your database details
-    private static final String JDBC_URL = "jdbc:mysql://192.168.138.122:3306/myDB";
-    private static final String JDBC_USER = "beeru";
-    private static final String JDBC_PASSWORD = "Idrbt@12345";
+    private static final String JDBC_URL = "jdbc:mysql://192.168.138.126:3306/myDB";
+    private static final String JDBC_USER = "mysql";
+    private static final String JDBC_PASSWORD = "mysql";
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
